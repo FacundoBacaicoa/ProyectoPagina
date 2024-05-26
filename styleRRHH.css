@@ -12,7 +12,7 @@ body{
 }
 
 
-/*______________________________________Barra Menu______________________________________*/
+/*______________________________________header______________________________________*/
 header{
 display: flex;
 min-height: 90px;
@@ -43,7 +43,7 @@ nav a:hover{
     top: 0;
     transition: 0.5s;
     
-   
+/*_______________________________________RRHH_________________________________________*/
 }
 
 .RRHH-container{
@@ -68,7 +68,38 @@ nav a:hover{
     margin-bottom: 30px;
     border-radius: 1.5em;
 }
+.valores {
+  display: flex;
+  flex-direction: column;
+  
+  
+}
+.valores h3{
+  color: aliceblue;
+  margin-left: 120px;
+}
 
+.ul-valores {
+  padding: 20px; 
+  border: 1px solid #ccc; 
+  border-radius: 5px; 
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-bottom: 30px;
+  
+}
+
+.valores li {
+  text-align: left;
+  margin-bottom: 10px;
+  color: aliceblue;
+  font-size:20px ;
+  margin-left: 20px;
+  
+}
+
+/*____________________________________footer_______________________________________*/
 .footer {
     padding: 10px 50px;
     box-sizing: border-box;
