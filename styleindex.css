@@ -67,3 +67,198 @@ nav a:hover{
   margin-bottom: 20px;
 }
 /*_______________________________________________________*/
+.bienvenida {
+ 
+  padding: 40px;
+  text-align: center;
+  margin-bottom: 40px;
+  background-color:rgba(5, 15, 26, 0.363);
+}
+
+.bienvenida h2 {
+  font-size: 32px;
+  color: #fcfcfc;
+  margin-bottom: 20px;
+}
+
+.bienvenida p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.carousel-container {
+  position: relative;
+  width: 100%;
+  max-width: 1500px;
+  height: 700px;
+  border: 3px solid;
+  box-shadow: 0 0 8px 2px rgb(5, 15, 26);
+  margin: 40px auto 0;
+  display: flex;
+}
+
+.carousel-container .imgs {
+  width: 100%;
+  height: calc(100% - 40px);
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-container .imgs img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  object-fit: cover;
+  transition: opacity 0.5s ease-in-out;
+  margin: auto;
+  opacity: 0;
+}
+
+.carousel-container .imgs img.active {
+  opacity: 1;
+}
+
+span.sig,
+span.ant {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 14px;
+  color: #d4d5d6;
+  font-size: 24px;
+  font-weight: bold;
+  transition: 0.5s;
+  border-radius: 3px;
+  user-select: none;
+  cursor: pointer;
+  z-index: 1;
+}
+
+span.sig {
+  right: 20px;
+}
+
+span.ant {
+  left: 20px;
+}
+
+span.sig:hover,
+span.ant:hover {
+  background-color: #20190956;
+  opacity: 0.8;
+  color: #797bfa;
+}
+
+.dotsContainer {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  background-color: #bbb;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dot.active {
+  background-color: #333;
+}
+
+@media (max-width: 767px) {
+  .carousel-container {
+    height: 700px;
+    width: 600px;
+  }
+  span.sig,
+  span.ant {
+    font-size: 18px;
+    padding: 10px;
+  }
+  span.sig {
+    right: 10px;
+  }
+  span.ant {
+    left: 10px;
+  }
+}
+
+.footer {
+  padding: 20px 50px;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100px;
+  width: 100%;
+}
+
+
+
+.menu {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  align-items: center;
+  margin: 10px 0;
+  flex-wrap: wrap;
+}
+
+.menu-elem {
+  list-style: none;
+
+}
+.menu-elem img{
+  width: 30px;
+  height: 30px;
+  margin-left: 25px;
+}
+
+.menu-icon {
+  color: aliceblue;
+  font-size: 20px;
+  display: inline-block;
+  text-decoration: none;
+  margin: 5px 10px;
+  opacity: 0.75;
+  transition: 0.3s;
+}
+
+.menu-icon:hover {
+  opacity: 1;
+}
+
+.text {
+  color: aliceblue;
+  text-align: center;
+  margin-left: 25px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+@media (max-width: 700px) {
+  header {
+    flex-direction: column;
+  }
+
+  nav {
+    padding: 10px 0px;
+  }
+
+  footer {
+    flex-direction: column;
+  }
+}
