@@ -134,6 +134,60 @@ text-align: center;
 .error {
     color: red;
 }
+
+/*________________________Planes_______________________*/
+.Planes-container {
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+  margin-top: 80px;
+  margin-left: 1500px;
+  background-color: rgba(36, 35, 35, 0.774);
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.377);
+  max-width: 500px;
+
+
+}
+
+.Planes-container h2 {
+  color: rgb(224, 221, 221);
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.Planes-container h3 {
+  color: rgb(214, 212, 212);
+  font-size: 18px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.Planes-container ul {
+
+  padding: 0;
+  margin: 0;
+}
+
+.Planes-container li {
+  color: rgb(214, 212, 212);
+  font-size: 15px;
+  margin-bottom: 5px;
+}
+@media (min-width: 700px) {
+  .Planes-container, .Formulario {
+      display: inline-block;
+      vertical-align: top;
+  }
+
+  .Planes-container {
+      margin-left: 250px;
+      margin-right: 50px;
+      margin-bottom: 10px;
+
+  }
+}
 /*________________________footer_______________________*/
 .footer {
     padding: 20px 50px;
