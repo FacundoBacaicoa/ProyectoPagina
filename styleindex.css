@@ -12,7 +12,7 @@ body{
 }
 
 
-/*______________________________________Barra Menu______________________________________*/
+/*______________________________________Header______________________________________*/
 header{
 display: flex;
 min-height: 90px;
@@ -66,7 +66,7 @@ nav a:hover{
   color: #ffffff;
   margin-bottom: 20px;
 }
-/*_______________________________________________________*/
+/*____________________________bienvenida___________________________________*/
 .bienvenida {
  
   padding: 40px;
@@ -191,8 +191,59 @@ span.ant:hover {
   span.ant {
     left: 10px;
   }
+ /*_______________________COACHS_______________________________*/
+}
+.container-coachs {
+  padding: 150px 12px;
+  background-color: rgba(4, 16, 27, 0.897);
+  color: white;
+  text-align: center;
 }
 
+.container-coachs h2 {
+  margin-top: 0;
+  font-size: 3.2em;
+  font-family:'calibri';
+}
+
+.container-coachs p {
+  font-size: 1.3em;
+  font-family: 'calibri';
+  
+}
+.container-coachs h3{
+  font-size: 1.7em;
+  font-family: 'calibri';
+}
+
+
+.container-coachs .imgs {
+  max-width: 500px;
+  height: auto;
+  transition: transform 0.5s ease;
+  border-radius:5%;
+  margin: 30px;
+}
+
+.container-coachs .coachs {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; 
+ 
+}
+
+
+
+@media (max-width: 768px) {
+  .container-coachs .coachs {
+    flex-direction: column; 
+    align-items: center;
+    
+  }
+}
+
+ 
+/*________________________________footer______________________________________*/
 .footer {
   padding: 20px 50px;
   box-sizing: border-box;

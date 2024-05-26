@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styleindex.css">
+    <link rel="stylesheet" href="styleform.css">
     <title>Gimnasio</title>
 </head>
 <body>
@@ -20,5 +20,58 @@
            
             </nav>
     </header>
+</div>
+
+<div class="Formulario">
+    <form id="form" action="" class="form">
+        <h2>CONTACTO</h2>
+        <div class="input-group">
+            <label for="name">Nombre</label>
+            <input type="text" name="name" id="name" placeholder="Nombre">
+            <span id="nameError" class="error"></span>
+
+            <label for="phone">Telefono</label>
+            <input type="text" name="phone" id="phone" placeholder="Telefono">
+            <span id="phoneError" class="error"></span>
+
+            <label for="email">E-mail</label>
+            <input type="email" name="email" id="email" placeholder="E-mail">
+            <span id="emailError" class="error"></span>
+
+            <label for="message">Mensaje</label>
+            <textarea name="message" id="message" cols="30" rows="5" placeholder="Mensaje"></textarea>
+            <span id="messageError" class="error"></span>
+
+            <div class="form-txt">
+                <a href="#">Politicas de privacidad</a>
+                <a href="#">Terminos y condiciones</a>
+            </div>
+            <button type="submit" class="btn">Enviar</button>
+            <div id="submitStatus"></div>
+        </div>
+    </form>
+</div>
+
+    <footer class="footer">
+    </ul>
+    <ul class="menu">
+      <li class="menu-elem">
+        <a href="https://www.instagram.com/"><img src="imgsindex/instagram.png" alt="#"></a>
+      </li>
+      <li class="menu-elem">
+        <a href="https://web.whatsapp.com/"><img src="imgsindex/whatsapp.png" alt="#"></a>
+      </li>
+      <li class="menu-elem">
+        <a href="https://www.google.com/maps/@20.276338,-98.964443,17z?hl=es-MX"><img src="imgsindex/gps.png" alt="#"></a>
+      </li>
+      <li class="menu-elem">
+        <a href="https://www.facebook.com/"><img src="imgsindex/facebook.png" alt="#"></a>
+      </li>
+    </ul>
+
+<p class="text">&copy;2024|Todos los derechos reservados</p>
+</footer>  
+
+<script src="formulario.js"></script>
 </body>
 </html>
