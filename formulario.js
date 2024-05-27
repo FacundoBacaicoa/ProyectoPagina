@@ -18,13 +18,18 @@ form.addEventListener('submit', (event) => {
     if (nameInput.value.trim() === '') {
         nameError.textContent = 'Por favor, ingresa tu nombre';
         isValid = false;
+    } else if (nameInput.value.trim().length > 20) {
+        nameError.textContent = 'El nombre no puede tener más de 20 caracteres';
+        isValid = false;
     }
 
     if (phoneInput.value.trim() === '') {
         phoneError.textContent = 'Por favor, ingresa tu número de teléfono';
         isValid = false;
+    }else if (phoneInput.value.trim().length > 10) {
+        phoneError.textContent = 'El número no puede tener más de 10 caracteres';
+        isValid = false;
     }
-
     if (emailInput.value.trim() === '') {
         emailError.textContent = 'Por favor, ingresa tu correo electrónico';
         isValid = false;
@@ -35,6 +40,9 @@ form.addEventListener('submit', (event) => {
 
     if (messageInput.value.trim() === '') {
         messageError.textContent = 'Por favor, ingresa un mensaje';
+        isValid = false;
+    }else if (messageInput.value.trim().length > 100) {
+        messageError.textContent = 'El mensaje no puede tener más de 100 caracteres';
         isValid = false;
     }
 
