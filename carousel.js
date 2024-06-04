@@ -1,38 +1,44 @@
 carouselContainer = document.querySelector('.carousel-container');
       const carouselImgs = carouselContainer.querySelector('.imgs');
-      const imagenes = carouselImgs.querySelectorAll('img');
       const antBtn = carouselContainer.querySelector('.ant');
       const sigBtn = carouselContainer.querySelector('.sig');
       const dotsContainer = carouselContainer.querySelector('.dotsContainer');
       let currentIndex = 0;
-      const totalimagenes = imagenes.length;
+      const cImagenes = [
+        'imgsindex/11.jpg',
+        'imgsindex/22.jpg',
+        'imgsindex/33.jpg',
+      ];
 
-      function showImage(index) {
-        imagenes.forEach((img) => {
+      function mostrarImagen(index) {
+        const images = carouselImgs.querySelectorAll('img');
+        images.forEach((img, i) => {
           img.classList.remove('active');
+          if (i === index) {
+            img.classList.add('active');
+          }
         });
-        imagenes[index].classList.add('active');
         updateDots(index);
       }
-
+      
       function nextImage() {
         currentIndex++;
-        if (currentIndex >= totalimagenes) {
+        if (currentIndex >= cImagenes.length) {
           currentIndex = 0;
         }
-        showImage(currentIndex);
+        mostrarImagen(currentIndex);
       }
 
       function prevImage() {
         currentIndex--;
         if (currentIndex < 0) {
-          currentIndex = totalimagenes - 1;
+          currentIndex = cImagenes.length - 1;
         }
-        showImage(currentIndex);
+        mostrarImagen(currentIndex);
       }
 
       function createDots() {
-        for (let i = 0; i < totalimagenes; i++) {
+        for (let i = 0; i < cImagenes.length; i++) {
           const dot = document.createElement('span');
           dot.classList.add('dot');
           dot.addEventListener('click', () => showImage(i));
@@ -51,7 +57,21 @@ carouselContainer = document.querySelector('.carousel-container');
         });
       }
 
+      function crearImagenes() {
+        cImagenes.forEach((imgSrc, index) => {
+          const img = document.createElement('img');
+          img.src = imgSrc;
+          img.alt = '';
+          img.classList.add('carousel-img');
+          if (index === currentIndex) {
+            img.classList.add('active');
+          }
+          carouselImgs.appendChild(img);
+        });
+      }
+
       antBtn.addEventListener('click', prevImage);
       sigBtn.addEventListener('click', nextImage);
       createDots();
-      showImage(currentIndex);
+      crearImagenes();
+      mostrarImagen(currentIndex);
