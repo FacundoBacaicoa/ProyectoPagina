@@ -55,17 +55,7 @@ form.addEventListener('submit', (event) => {
         const telefono = telefonoInput ? telefonoInput.value : '';
         const email = emailInput ? emailInput.value : '';
       
-        submitStatus.innerHTML = `
-          <p class="success">
-            ¡Gracias por contactarnos, ${nombre}!
-            <br>
-            Tu número de teléfono: ${telefono}
-            <br>
-            Tu correo electrónico: ${email}
-            <br>
-            En breve revisaremos tu solicitud.
-          </p>
-        `;
+        displaySubmittedData(nombre, telefono, email);
       
         form.reset();
       } else {
@@ -84,4 +74,28 @@ function clearErrors() {
 function isValidEmail(email) {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(email);
+}
+function displaySubmittedData(nombre, telefono, email){
+    submitStatus.innerHTML = '';
+
+    const container = document.createElement('div');
+    container.className = 'success';
+
+    const title = document.createElement('h3');
+    title.textContent = `¡Gracias por contactarnos, ${nombre}!`;
+    container.appendChild(title);
+
+    const telefonoP = document.createElement('p');
+    telefonoP.innerHTML = 'Tu número de teléfono: <strong>' + telefono + '</strong>'
+    container.appendChild(telefonoP);
+
+    const emailP = document.createElement('p');
+    emailP.innerHTML = 'Tu correo electrónico: <strong>' + email + '</strong>';
+    container.appendChild(emailP);
+
+    const mensajeP = document.createElement('p');
+    mensajeP.textContent = 'En breve revisaremos tu solicitud.';
+    container.appendChild(mensajeP);
+
+    submitStatus.appendChild(container);
 }
